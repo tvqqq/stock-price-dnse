@@ -31,7 +31,7 @@ serve(async (req: Request) => {
         }
         console.log('lastPrice', lastPrice);
         count++;
-    } while (!lastPrice)
+    } while (!lastPrice || count < 3)
 
     const result = {
         data: {
